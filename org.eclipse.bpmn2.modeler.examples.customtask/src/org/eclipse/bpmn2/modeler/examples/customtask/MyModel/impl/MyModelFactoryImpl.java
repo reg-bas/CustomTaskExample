@@ -2,11 +2,7 @@
  */
 package org.eclipse.bpmn2.modeler.examples.customtask.MyModel.impl;
 
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.DocumentRoot;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.MyModelFactory;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.MyModelPackage;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.Parameter;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.TaskConfig;
+import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -21,17 +17,6 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  */
 public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
-	@Deprecated
-	public static MyModelPackage getPackage() {
-		return MyModelPackage.eINSTANCE;
-	}
-
-	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,7 +24,7 @@ public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	 */
 	public static MyModelFactory init() {
 		try {
-			MyModelFactory theMyModelFactory = (MyModelFactory)EPackage.Registry.INSTANCE.getEFactory("http://org.eclipse.bpmn2.modeler.examples.customtask"); 
+			MyModelFactory theMyModelFactory = (MyModelFactory)EPackage.Registry.INSTANCE.getEFactory(MyModelPackage.eNS_URI);
 			if (theMyModelFactory != null) {
 				return theMyModelFactory;
 			}
@@ -81,7 +66,6 @@ public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
@@ -92,7 +76,6 @@ public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
@@ -103,7 +86,6 @@ public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public TaskConfig createTaskConfig() {
 		TaskConfigImpl taskConfig = new TaskConfigImpl();
 		return taskConfig;
@@ -114,9 +96,19 @@ public class MyModelFactoryImpl extends EFactoryImpl implements MyModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public MyModelPackage getMyModelPackage() {
 		return (MyModelPackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static MyModelPackage getPackage() {
+		return MyModelPackage.eINSTANCE;
 	}
 
 } //MyModelFactoryImpl

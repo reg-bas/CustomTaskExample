@@ -2,10 +2,7 @@
  */
 package org.eclipse.bpmn2.modeler.examples.customtask.MyModel.util;
 
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.DocumentRoot;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.MyModelPackage;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.Parameter;
-import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.TaskConfig;
+import org.eclipse.bpmn2.modeler.examples.customtask.MyModel.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;

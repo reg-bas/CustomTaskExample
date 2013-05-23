@@ -22,9 +22,9 @@
          point="org.eclipse.bpmn2.modeler.runtime">
       <runtime
             class="org.eclipse.bpmn2.modeler.examples.customtask.MyRuntimeExtension"
-            description="BPMN2 Modeler Runtime Extension - Custom Task Example"
+            description="BPMN2 Modeler Runtime Extension - reg_bas Example"
             id="org.eclipse.bpmn2.modeler.examples.customtask.runtime"
-            name="Custom Task Example Runtime Exension">
+            name="Custom Task Example Runtime Exension - reg_bas">
       </runtime>
       <model
             resourceFactory="org.eclipse.bpmn2.modeler.examples.customtask.MyModel.util.MyModelResourceFactoryImpl"
@@ -77,7 +77,7 @@
 		profile="org.eclipse.bpmn2.modeler.examples.customtask.modelEnablement1"
 				runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime"
 				type="Process">
-				<diable object="all"/>
+				<disable object="all"/>
 				
 				<enable object="default" feature="Process"/>
 				<enable object="Task" feature="taskConfig"/>
