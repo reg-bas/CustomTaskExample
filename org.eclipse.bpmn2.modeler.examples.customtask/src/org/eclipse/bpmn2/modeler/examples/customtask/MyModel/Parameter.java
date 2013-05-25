@@ -39,6 +39,16 @@ public interface Parameter extends EObject {
 	String getName();
 
 	/**
+	 * Sets the value of the '{@link org.eclipse.bpmn2.modeler.examples.customtask.MyModel.Parameter#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -53,16 +63,6 @@ public interface Parameter extends EObject {
 	 * @generated
 	 */
 	String getValue();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.bpmn2.modeler.examples.customtask.MyModel.Parameter#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.bpmn2.modeler.examples.customtask.MyModel.Parameter#getValue <em>Value</em>}' attribute.

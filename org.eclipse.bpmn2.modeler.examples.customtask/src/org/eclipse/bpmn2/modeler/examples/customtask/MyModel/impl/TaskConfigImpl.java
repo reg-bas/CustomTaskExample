@@ -54,12 +54,20 @@ public class TaskConfigImpl extends EObjectImpl implements TaskConfig {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case MyModelPackage.TASK_CONFIG__PARAMETERS:
-				return getParameters();
+	protected EClass eStaticClass() {
+		return MyModelPackage.Literals.TASK_CONFIG;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Parameter> getParameters() {
+		if (parameters == null) {
+			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, MyModelPackage.TASK_CONFIG__PARAMETERS);
 		}
-		return super.eGet(featureID, resolve, coreType);
+		return parameters;
 	}
 
 	/**
@@ -82,12 +90,12 @@ public class TaskConfigImpl extends EObjectImpl implements TaskConfig {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MyModelPackage.TASK_CONFIG__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
+				return getParameters();
 		}
-		return super.eIsSet(featureID);
+		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
@@ -113,16 +121,6 @@ public class TaskConfigImpl extends EObjectImpl implements TaskConfig {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
-		return MyModelPackage.Literals.TASK_CONFIG;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MyModelPackage.TASK_CONFIG__PARAMETERS:
@@ -138,11 +136,12 @@ public class TaskConfigImpl extends EObjectImpl implements TaskConfig {
 	 * @generated
 	 */
 	@Override
-	public EList<Parameter> getParameters() {
-		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, MyModelPackage.TASK_CONFIG__PARAMETERS);
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case MyModelPackage.TASK_CONFIG__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
 		}
-		return parameters;
+		return super.eIsSet(featureID);
 	}
 
 } //TaskConfigImpl
